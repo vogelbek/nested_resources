@@ -1,28 +1,21 @@
-== README
+# Step-by-Step Lists
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Practicing the use of nested resources, as based on the [Rails Resources][1] guide.
 
-Things you may want to cover:
+##To get started with this repo:
 
-* Ruby version
+`git clone https://github.com/vogelbek/nested_resources.git`
 
-* System dependencies
+`cd nested_resouces`
 
-* Configuration
+`bundle install`
 
-* Database creation
+`rake db:setup`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rails server`
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Links list
+1) [Rails Resources][1]
+
+[1]: http://guides.rubyonrails.org/v3.2.13/routing.html 'Guide for setting up Rails routes'
