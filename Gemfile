@@ -6,7 +6,13 @@ gem 'rails', '4.0.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Testing framework
+group :test do
+  gem 'minitest-rails-capybara'
+end
+
 # Front-end
+gem 'zurb-foundation'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
