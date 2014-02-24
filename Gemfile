@@ -7,6 +7,7 @@ gem 'rails', '4.0.3'
 gem 'sqlite3'
 
 # Testing framework
+gem 'minitest-rails'
 group :test do
   gem 'minitest-rails-capybara'
 end

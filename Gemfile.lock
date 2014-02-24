@@ -138,6 +138,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  minitest-rails
   minitest-rails-capybara
   rails (= 4.0.3)
   sass-rails (~> 4.0.0)
