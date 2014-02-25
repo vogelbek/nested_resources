@@ -1,6 +1,10 @@
 NestedResources::Application.routes.draw do
 
-  resources :lists
+
+
+  resources :lists do
+    resources :steps
+  end
 
   root 'lists#index'
 

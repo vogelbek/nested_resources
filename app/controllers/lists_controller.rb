@@ -15,10 +15,12 @@ class ListsController < ApplicationController
   # GET /lists/new
   def new
     @list = List.new
+    @list.steps.build
   end
 
   # GET /lists/1/edit
   def edit
+    @list.steps.build if @list.steps.empty?
   end
 
   # POST /lists
@@ -67,8 +69,9 @@ class ListsController < ApplicationController
       @list = List.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
-      params[:list].permit(:title)
+      params[:list].permit(:title, steps_attributes: [:item, :title, :explaination] )
     end
 end
