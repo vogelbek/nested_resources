@@ -15,6 +15,22 @@
     <%= f.text_field :title%>
   </div>
 
+  <%= f.fields_for :steps do |steps_form|%>
+
+    <div class="field">
+      <%= steps_form.label :item %><br>
+      <%= steps_form.text_field :item %>
+    </div>
+    <div class="field">
+      <%= steps_form.label :title %><br>
+      <%= steps_form.text_field :title %>
+    </div>
+    <div class="field">
+      <%= steps_form.label :explination %><br>
+      <%= steps_form.text_area :explination %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
