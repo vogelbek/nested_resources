@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :steps, only: [:show, :edit, :update, :destroy]
 
   # GET /lists
   # GET /lists.json
@@ -42,7 +43,7 @@ class ListsController < ApplicationController
   def update
     respond_to do |format|
       if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'List was successfully updated.' }
+        format.html { redirect_to lists_path }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +70,6 @@ class ListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
-      params[:list]
+      params[:list].permit(:title)
     end
 end
